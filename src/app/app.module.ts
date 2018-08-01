@@ -10,6 +10,7 @@ import { HomeComponent } from './component/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RssService } from './service/rss.service';
 import { CustomFeedCardComponent } from './component/custom-feed-card/custom-feed-card.component';
+import { FeedDetailsComponent } from './component/feed-details/feed-details.component';
 
 export const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,7 +23,8 @@ export const appRoutes: Routes = [
     AppComponent,
     RssReaderComponent,
     HomeComponent,
-    CustomFeedCardComponent
+    CustomFeedCardComponent,
+    FeedDetailsComponent
   ],
   imports: [
     BrowserModule,
