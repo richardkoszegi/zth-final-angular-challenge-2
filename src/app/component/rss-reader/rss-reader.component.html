@@ -1,4 +1,18 @@
 <button mat-button (click)="reloadFeeds()">{{loadButtonLabel}}</button>
 
-<app-custom-feed-card *ngFor="let rssFeed of rssFeeds" [rssFeed]="rssFeed"></app-custom-feed-card>
+<button (click)="changeView()">Nézet váltása</button>
+
+<div *ngIf="isCardView">
+        <app-custom-feed-card *ngFor="let rssFeed of rssFeeds" [rssFeed]="rssFeed"></app-custom-feed-card>
+</div>
+
+<div *ngIf="!isCardView">
+<ul>
+    <li *ngFor="let rssFeed of rssFeeds">
+            Title: {{rssFeed.title}}<br/>
+            Date: {{rssFeed.pubDate}}<br/>
+            Author: {{rssFeed.author}}
+    </li>
+</ul>
+</div>
 

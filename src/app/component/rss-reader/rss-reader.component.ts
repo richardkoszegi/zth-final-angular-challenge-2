@@ -11,6 +11,7 @@ export class RssReaderComponent implements OnInit {
 
   rssFeeds: RssModel[];
   loadButtonLabel= 'Betöltés';
+  isCardView = true;
 
   constructor(private rssService: RssService) { }
 
@@ -23,6 +24,10 @@ export class RssReaderComponent implements OnInit {
       this.rssFeeds = data.items;
       this.loadButtonLabel = 'Feedek frissítése';
     })
+  }
+
+  changeView() {
+    this.isCardView = !this.isCardView;
   }
 
 }
