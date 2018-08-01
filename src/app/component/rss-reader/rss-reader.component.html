@@ -1,8 +1,2 @@
-<mat-card *ngFor="let rssFeed of rssFeeds">
-  <mat-card-header>
-    <mat-card-title>Title: {{rssFeed.title}}<br/> Author: {{rssFeed.author}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    {{rssFeed.description}}
-  </mat-card-content>
-</mat-card>
+<app-custom-feed-card *ngFor="let rssFeed of rssFeeds" [rssFeed]="rssFeed"></app-custom-feed-card>
+
