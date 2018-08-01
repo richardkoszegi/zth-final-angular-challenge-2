@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RssReaderComponent } from './component/rss-reader/rss-reader.component';
 import { HomeComponent } from './component/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RssService } from './service/rss.service';
 
 export const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,11 +24,13 @@ export const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [ RssService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
