@@ -1,2 +1,4 @@
+<button mat-button (click)="reloadFeeds()">{{loadButtonLabel}}</button>
+
 <app-custom-feed-card *ngFor="let rssFeed of rssFeeds" [rssFeed]="rssFeed"></app-custom-feed-card>
 
